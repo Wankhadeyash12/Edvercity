@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yash Wankhade Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(-45deg,#0f172a,#1e293b,#312e81,#0f172a);
+    background-size:400% 400%;
+    animation:gradient 10s ease infinite;
+    padding:30px;
+}
+
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.card{
+    width:90%;
+    max-width:1000px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:30px;
+    padding:40px;
+    color:white;
+    box-shadow:0 15px 40px rgba(0,0,0,0.4);
+}
+
+.profile{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.profile img{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    border:4px solid #38bdf8;
+    box-shadow:0 0 25px #38bdf8;
+}
+
+h1{
+    font-size:3rem;
+    margin-top:15px;
+    background:linear-gradient(to right,#38bdf8,#818cf8);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+h2{
+    color:#38bdf8;
+    margin-top:30px;
+    margin-bottom:15px;
+    border-left:5px solid #38bdf8;
+    padding-left:15px;
+}
+
+h3{
+    color:#f8fafc;
+    font-weight:500;
+    margin-bottom:10px;
+}
+
+p{
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.skill{
+    text-align:center;
+    padding:15px;
+    background:rgba(255,255,255,0.1);
+    border-radius:15px;
+    transition:0.4s;
+    font-weight:600;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.skill:hover{
+    transform:translateY(-8px);
+    background:#38bdf8;
+    color:#0f172a;
+    box-shadow:0 0 20px #38bdf8;
+}
+
+.github{
+    text-align:center;
+    margin-top:40px;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(45deg,#06b6d4,#6366f1);
+    padding:15px 35px;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:600;
+    transition:0.4s;
+    box-shadow:0 0 20px rgba(99,102,241,0.5);
+}
+
+.btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 30px rgba(99,102,241,0.9);
+}
+
+.footer{
+    text-align:center;
+    margin-top:30px;
+    color:#94a3b8;
+    font-size:14px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="card">
+
+    <div class="profile">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile">
+        <h1>Yash Bhujanga Wankhade</h1>
+        <h3>🚀 Aspiring Full Stack Developer</h3>
+    </div>
+
+    <h2>College</h2>
+    <p>
+        Suryodaya College of Engineering and Technology, Nagpur
+    </p>
+
+    <h2>About Me</h2>
+    <p>
+        I am a Computer Engineering student passionate about Web Development,
+        MERN Stack Development, Mobile App Development, and Problem Solving.
+        I enjoy building modern applications and continuously learning new technologies.
+    </p>
+
+    <h2>Technical Skills</h2>
+
+    <div class="skills">
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React.js</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">Express.js</div>
+        <div class="skill">MongoDB</div>
+        <div class="skill">MERN Stack</div>
+        <div class="skill">Java</div>
+        <div class="skill">C++</div>
+        <div class="skill">Firebase</div>
+        <div class="skill">SQLite</div>
+        <div class="skill">Git</div>
+        <div class="skill">GitHub</div>
+    </div>
+
+    <div class="github">
+        <a href="https://github.com/Wankhadeyash12" target="_blank" class="btn">
+            🔗 Visit My GitHub
+        </a>
+    </div>
+
+    <div class="footer">
+        © 2026 | Designed by Yash Wankhade
+    </div>
+
+</div>
+
+</body>
+</html>
