@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback Form</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#4f46e5,#7c3aed);
+    padding:20px;
+}
+
+.container{
+    width:450px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+h2{
+    text-align:center;
+    color:#4f46e5;
+    margin-bottom:20px;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+label{
+    font-weight:bold;
+    display:block;
+    margin-bottom:8px;
+}
+
+.options{
+    margin-top:5px;
+}
+
+.options label{
+    display:block;
+    font-weight:normal;
+    margin:8px 0;
+}
+
+textarea{
+    width:100%;
+    height:120px;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    resize:none;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#4f46e5;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#3730a3;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <h2>📝 Customer Feedback Form</h2>
+
+    <form>
+
+        <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" style="width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;" placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+            <label>Rate Our Service</label>
+
+            <div class="options">
+                <label><input type="radio" name="rating"> Excellent</label>
+                <label><input type="radio" name="rating"> Good</label>
+                <label><input type="radio" name="rating"> Average</label>
+                <label><input type="radio" name="rating"> Poor</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Services Used</label>
+
+            <div class="options">
+                <label><input type="checkbox"> Website</label>
+                <label><input type="checkbox"> Mobile App</label>
+                <label><input type="checkbox"> Customer Support</label>
+                <label><input type="checkbox"> Online Payment</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Your Feedback</label>
+            <textarea placeholder="Write your feedback here..."></textarea>
+        </div>
+
+        <button type="submit">Submit Feedback</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
