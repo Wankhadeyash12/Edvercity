@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Segoe UI', sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(135deg, #4facfe, #00f2fe);
+        }
+
+        .container{
+            background:white;
+            width:80%;
+            max-width:700px;
+            padding:40px;
+            border-radius:20px;
+            text-align:center;
+            box-shadow:0 10px 30px rgba(0,0,0,0.2);
+            transition:0.3s;
+        }
+
+        .container:hover{
+            transform:translateY(-5px);
+        }
+
+        h1{
+            color:#1e3a8a;
+            margin-bottom:20px;
+            font-size:2.5rem;
+        }
+
+        p{
+            color:#555;
+            font-size:18px;
+            line-height:1.8;
+            margin-bottom:30px;
+        }
+
+        .btn{
+            background:linear-gradient(45deg, #4facfe, #00c6ff);
+            color:white;
+            border:none;
+            padding:14px 30px;
+            font-size:18px;
+            border-radius:30px;
+            cursor:pointer;
+            transition:0.3s;
+            box-shadow:0 5px 15px rgba(0,198,255,0.4);
+        }
+
+        .btn:hover{
+            transform:scale(1.08);
+            box-shadow:0 8px 20px rgba(0,198,255,0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🌐 Web Development</h1>
+
+        <p>
+            Web Development is the process of building and maintaining websites.
+            It combines <strong>HTML</strong> for structure,
+            <strong>CSS</strong> for design, and
+            <strong>JavaScript</strong> for interactivity.
+            Modern web technologies enable developers to create fast, responsive,
+            and user-friendly websites used by millions of people every day.
+        </p>
+
+        <button class="btn" onclick="alert('Welcome to the World of Web Development! 🚀')">
+            Explore More
+        </button>
+    </div>
+
+</body>
+</html>
