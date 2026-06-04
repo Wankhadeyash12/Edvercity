@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Link Page</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#4285F4,#34A853,#FBBC05,#EA4335);
+    background-size:400% 400%;
+    animation:gradient 10s ease infinite;
+}
+
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    width:90%;
+    max-width:700px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    padding:50px;
+    text-align:center;
+    color:white;
+    box-shadow:0 15px 40px rgba(0,0,0,0.3);
+}
+
+h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.google-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:white;
+    color:#4285F4;
+    font-size:20px;
+    font-weight:600;
+    padding:15px 35px;
+    border-radius:50px;
+    transition:0.4s;
+    box-shadow:0 8px 25px rgba(255,255,255,0.4);
+}
+
+.google-btn:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 12px 35px rgba(255,255,255,0.7);
+}
+
+.icon{
+    font-size:60px;
+    margin-bottom:15px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="icon">🌐</div>
+
+    <h1>Explore Google</h1>
+
+    <p>
+        Click the button below to open Google in a new tab and explore
+        the world's most popular search engine.
+    </p>
+
+    <a href="https://www.google.com"
+       target="_blank"
+       class="google-btn">
+       🔍 Open Google
+    </a>
+
+</div>
+
+</body>
+</html>
