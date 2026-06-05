@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Button</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#141e30,#243b55);
+}
+
+/* Animated Button */
+.btn{
+    padding:18px 40px;
+    font-size:20px;
+    font-weight:600;
+    color:white;
+    text-decoration:none;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    background:linear-gradient(45deg,#ff416c,#ff4b2b);
+    box-shadow:0 0 20px rgba(255,75,43,0.6);
+
+    /* Keyframe Animation */
+    animation:pulse 2s infinite;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+}
+
+/* Keyframes */
+@keyframes pulse{
+    0%{
+        box-shadow:0 0 10px rgba(255,75,43,0.5);
+    }
+
+    50%{
+        box-shadow:0 0 35px rgba(255,75,43,1);
+    }
+
+    100%{
+        box-shadow:0 0 10px rgba(255,75,43,0.5);
+    }
+}
+</style>
+</head>
+<body>
+
+<button class="btn">
+    Click Me
+</button>
+
+</body>
+</html>
