@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Circular Profile Card</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+}
+
+.profile-card{
+    width:350px;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.profile-card:hover{
+    transform:translateY(-8px);
+}
+
+.profile-img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #667eea;
+    box-shadow:0 5px 20px rgba(0,0,0,0.25);
+}
+
+h2{
+    margin-top:20px;
+    color:#333;
+}
+
+p{
+    margin-top:10px;
+    color:#666;
+    line-height:1.6;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#667eea;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#764ba2;
+}
+</style>
+</head>
+<body>
+
+<div class="profile-card">
+
+    <img src="yash.jpeg"
+         alt="Profile Image"
+         class="profile-img">
+
+    <h2>Yash Wankhade</h2>
+
+    <p>
+        Full Stack Developer | MERN Stack Enthusiast |
+        Passionate about Web Development and Learning New Technologies.
+    </p>
+
+    <a href="https://github.com/Wankhadeyash12" class="btn">View Profile</a>
+
+</div>
+
+</body>
+</html>
