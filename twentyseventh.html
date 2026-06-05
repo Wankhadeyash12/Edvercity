@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing Cards</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    padding:40px;
+}
+
+.container{
+    width:100%;
+    max-width:1200px;
+    text-align:center;
+}
+
+.container h1{
+    color:white;
+    margin-bottom:50px;
+    font-size:3rem;
+    text-shadow:3px 3px 10px rgba(0,0,0,0.3);
+}
+
+.pricing{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    width:320px;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+    transition:0.4s;
+    position:relative;
+}
+
+.card:hover{
+    transform:translateY(-15px);
+}
+
+.card h2{
+    color:#333;
+    margin-bottom:20px;
+}
+
+.price{
+    font-size:3rem;
+    font-weight:bold;
+    color:#667eea;
+    margin-bottom:20px;
+}
+
+.price span{
+    font-size:16px;
+    color:#777;
+}
+
+ul{
+    list-style:none;
+    margin:25px 0;
+}
+
+ul li{
+    padding:10px;
+    color:#555;
+    border-bottom:1px solid #eee;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 30px;
+    text-decoration:none;
+    background:#667eea;
+    color:white;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#764ba2;
+}
+
+/* Featured Card */
+.featured{
+    transform:scale(1.08);
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    color:white;
+}
+
+.featured h2,
+.featured .price,
+.featured ul li{
+    color:white;
+}
+
+.featured .price span{
+    color:#f0f0f0;
+}
+
+.featured .btn{
+    background:white;
+    color:#667eea;
+}
+
+.badge{
+    position:absolute;
+    top:-15px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#ff9800;
+    color:white;
+    padding:8px 20px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+@media(max-width:992px){
+    .featured{
+        transform:none;
+    }
+}
+
+@media(max-width:768px){
+    .container h1{
+        font-size:2.2rem;
+    }
+
+    .card{
+        width:100%;
+        max-width:350px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Choose Your Plan</h1>
+
+    <div class="pricing">
+
+        <!-- Basic Plan -->
+        <div class="card">
+            <h2>Basic</h2>
+
+            <div class="price">
+                ₹299 <span>/month</span>
+            </div>
+
+            <ul>
+                <li>✔ 5 Projects</li>
+                <li>✔ 10 GB Storage</li>
+                <li>✔ Email Support</li>
+                <li>✖ Premium Features</li>
+            </ul>
+
+            <a href="#" class="btn">Get Started</a>
+        </div>
+
+        <!-- Pro Plan -->
+        <div class="card featured">
+
+            <div class="badge">Most Popular</div>
+
+            <h2>Pro</h2>
+
+            <div class="price">
+                ₹699 <span>/month</span>
+            </div>
+
+            <ul>
+                <li>✔ Unlimited Projects</li>
+                <li>✔ 100 GB Storage</li>
+                <li>✔ Priority Support</li>
+                <li>✔ Premium Features</li>
+            </ul>
+
+            <a href="#" class="btn">Choose Plan</a>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="card">
+            <h2>Premium</h2>
+
+            <div class="price">
+                ₹1299 <span>/month</span>
+            </div>
+
+            <ul>
+                <li>✔ Unlimited Projects</li>
+                <li>✔ Unlimited Storage</li>
+                <li>✔ 24/7 Support</li>
+                <li>✔ All Premium Features</li>
+            </ul>
+
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
