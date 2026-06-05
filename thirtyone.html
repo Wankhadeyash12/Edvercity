@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dark Mode Dashboard</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    min-height:100vh;
+    color:white;
+}
+
+/* Navbar */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#38bdf8;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+}
+
+.nav-links li{
+    margin-left:25px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+/* Hero Section */
+.hero{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+    color:#38bdf8;
+    text-shadow:0 0 20px #38bdf8;
+}
+
+.hero p{
+    color:#cbd5e1;
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(45deg,#38bdf8,#8b5cf6);
+    border-radius:50px;
+    box-shadow:0 0 20px rgba(56,189,248,0.5);
+    transition:.4s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 30px rgba(56,189,248,0.8);
+}
+
+/* Cards */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    padding:50px 8%;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(56,189,248,0.3);
+}
+
+.card i{
+    font-size:40px;
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#cbd5e1;
+}
+
+/* Stats */
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    padding:30px;
+}
+
+.stat-box{
+    background:#111827;
+    padding:25px 40px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.4);
+}
+
+.stat-box h2{
+    color:#38bdf8;
+}
+
+.stat-box p{
+    color:#94a3b8;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    color:#94a3b8;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+    }
+
+    .nav-links{
+        margin-top:15px;
+    }
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">DarkUI</div>
+
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h1>Dark Mode Dashboard</h1>
+
+    <p>
+        Elegant, modern, and responsive dark theme UI
+        with glassmorphism and neon glow effects.
+    </p>
+
+    <a href="#" class="btn">Get Started</a>
+</section>
+
+<div class="stats">
+    <div class="stat-box">
+        <h2>12K+</h2>
+        <p>Users</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>500+</h2>
+        <p>Projects</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>98%</h2>
+        <p>Success Rate</p>
+    </div>
+</div>
+
+<section class="cards">
+
+    <div class="card">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Development</h3>
+        <p>Modern web and mobile solutions.</p>
+    </div>
+
+    <div class="card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Analytics</h3>
+        <p>Track performance and growth easily.</p>
+    </div>
+
+    <div class="card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Security</h3>
+        <p>Advanced protection for your data.</p>
+    </div>
+
+    <div class="card">
+        <i class="fas fa-cloud"></i>
+        <h3>Cloud Services</h3>
+        <p>Reliable cloud infrastructure support.</p>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 DarkUI Dashboard | Designed with ❤️
+</footer>
+
+</body>
+</html>
