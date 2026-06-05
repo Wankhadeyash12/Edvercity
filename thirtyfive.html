@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartPhone Hub</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f4f4;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:#111827;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#00d4ff;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#00d4ff;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+background:
+linear-gradient(rgba(0,0,0,.5),
+rgba(0,0,0,.5)),
+url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1600');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:1.2rem;
+margin-bottom:30px;
+}
+
+.btn{
+padding:14px 35px;
+background:#00d4ff;
+color:#111;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+background:white;
+}
+
+/* SECTION */
+
+section{
+padding:80px 8%;
+}
+
+.title{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:50px;
+color:#111827;
+}
+
+/* PRODUCTS */
+
+.products{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card-content h3{
+margin-bottom:10px;
+}
+
+.price{
+font-size:22px;
+font-weight:bold;
+color:#00b894;
+margin:15px 0;
+}
+
+.buy-btn{
+display:inline-block;
+padding:10px 20px;
+background:#111827;
+color:white;
+text-decoration:none;
+border-radius:25px;
+}
+
+/* OFFERS */
+
+.offer{
+background:
+linear-gradient(135deg,
+#111827,
+#1f2937);
+
+color:white;
+text-align:center;
+border-radius:20px;
+padding:50px;
+}
+
+.offer h2{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+font-size:18px;
+margin:10px 0;
+}
+
+/* FOOTER */
+
+footer{
+background:linear-gradient(
+135deg,
+#141e30,
+#243b55);
+
+color:white;
+padding:50px 20px 20px;
+}
+
+.footer-container{
+max-width:1200px;
+margin:auto;
+
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+}
+
+.footer-section h3{
+margin-bottom:15px;
+color:#00d4ff;
+}
+
+.footer-section p,
+.footer-section a{
+color:#ddd;
+text-decoration:none;
+line-height:1.8;
+}
+
+.footer-section a:hover{
+color:#00d4ff;
+}
+
+.social-icons{
+margin-top:15px;
+}
+
+.social-icons a{
+display:inline-flex;
+justify-content:center;
+align-items:center;
+width:45px;
+height:45px;
+border-radius:50%;
+margin-right:10px;
+
+background:rgba(255,255,255,.1);
+
+color:white;
+transition:.3s;
+}
+
+.social-icons a:hover{
+background:#00d4ff;
+color:#111827;
+transform:translateY(-5px);
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:30px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,.2);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+nav{
+flex-direction:column;
+}
+
+nav ul{
+margin-top:15px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+📱 SmartPhone Hub
+</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#offers">Offers</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
+
+<h1>Latest Smartphones 2026</h1>
+
+<p>
+Discover flagship phones at amazing prices
+</p>
+
+<a href="#products" class="btn">
+Shop Now
+</a>
+
+</div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section id="products">
+
+<h2 class="title">
+Featured Smartphones
+</h2>
+
+<div class="products">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab">
+
+<div class="card-content">
+
+<h3>iPhone 17 Pro</h3>
+
+<p>Apple's newest flagship.</p>
+
+<div class="price">
+₹1,29,999
+</div>
+
+<a href="#" class="buy-btn">
+Buy Now
+</a>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf">
+
+<div class="card-content">
+
+<h3>Samsung Galaxy S26</h3>
+
+<p>Premium Android experience.</p>
+
+<div class="price">
+₹99,999
+</div>
+
+<a href="#" class="buy-btn">
+Buy Now
+</a>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1580910051074-3eb694886505">
+
+<div class="card-content">
+
+<h3>Google Pixel 11</h3>
+
+<p>Best AI Camera Phone.</p>
+
+<div class="price">
+₹84,999
+</div>
+
+<a href="#" class="buy-btn">
+Buy Now
+</a>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- OFFER -->
+
+<section id="offers">
+
+<div class="offer">
+
+<h2>🔥 Mega Sale</h2>
+
+<p>
+Get up to 40% OFF on selected smartphones.
+</p>
+
+<br>
+
+<a href="#" class="btn">
+Claim Offer
+</a>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+<h2 class="title">
+Contact Us
+</h2>
+
+<p>📞 +91 9876543210</p>
+
+<p>📧 support@smartphonehub.com</p>
+
+<p>📍 Nagpur, Maharashtra</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-container">
+
+<div class="footer-section">
+
+<h3>SmartPhone Hub</h3>
+
+<p>
+India's trusted smartphone store with
+the latest devices and exciting offers.
+</p>
+
+</div>
+
+<div class="footer-section">
+
+<h3>Quick Links</h3>
+
+<p><a href="#">Home</a></p>
+<p><a href="#">Products</a></p>
+<p><a href="#">Offers</a></p>
+<p><a href="#">Contact</a></p>
+
+</div>
+
+<div class="footer-section">
+
+<h3>Follow Us</h3>
+
+<div class="social-icons">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-x-twitter"></i></a>
+
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+<a href="#"><i class="fab fa-github"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+© 2026 SmartPhone Hub | All Rights Reserved ❤️
+
+</div>
+
+</footer>
+
+</body>
+</html>
