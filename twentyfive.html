@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hover Zoom Image Gallery</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    padding:40px;
+}
+
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:40px;
+    font-size:3rem;
+    text-shadow:3px 3px 10px rgba(0,0,0,0.3);
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.image-card{
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    cursor:pointer;
+    position:relative;
+}
+
+.image-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    display:block;
+    transition:transform 0.6s ease;
+}
+
+/* Hover Zoom Effect */
+.image-card:hover img{
+    transform:scale(1.2);
+}
+
+.overlay{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    padding:15px;
+    background:rgba(0,0,0,0.6);
+    color:white;
+    text-align:center;
+    font-size:18px;
+    opacity:0;
+    transition:0.4s;
+}
+
+.image-card:hover .overlay{
+    opacity:1;
+}
+</style>
+</head>
+<body>
+
+<h1>Hover Zoom Image Gallery</h1>
+
+<div class="gallery">
+
+    <div class="image-card">
+        <img src="nature.png" alt="Nature">
+        <div class="overlay">Beautiful Nature</div>
+    </div>
+
+    <div class="image-card">
+        <img src="mountain.png" alt="Mountains">
+        <div class="overlay">Mountain View</div>
+    </div>
+
+    <div class="image-card">
+        <img src="beatch.png" alt="Beach">
+        <div class="overlay">Sunny Beach</div>
+    </div>
+
+    <div class="image-card">
+        <img src="forest.png" alt="Forest">
+        <div class="overlay">Green Forest</div>
+    </div>
+
+</div>
+
+</body>
+</html>
