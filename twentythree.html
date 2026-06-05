@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Loader Animation</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    font-family:Arial, sans-serif;
+}
+
+/* Loader */
+.loader{
+    width:80px;
+    height:80px;
+    border:8px solid #ffffff;
+    border-top:8px solid #ffcc00;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+/* Animation */
+@keyframes spin{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+h2{
+    margin-top:20px;
+    color:white;
+    letter-spacing:2px;
+}
+</style>
+</head>
+<body>
+
+<div class="loader"></div>
+<h2>Loading...</h2>
+
+</body>
+</html>
