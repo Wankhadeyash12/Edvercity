@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bean Bliss Café</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8f5f2;
+}
+
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(0,0,0,0.7);
+    position:fixed;
+    width:100%;
+    z-index:1000;
+}
+
+.logo{
+    color:#fff;
+    font-size:28px;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#ffb347;
+}
+
+/* Hero Section */
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1600");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:4rem;
+    margin-bottom:20px;
+    text-shadow:3px 3px 10px rgba(0,0,0,.5);
+}
+
+.hero-content p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#ffb347;
+    color:#222;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:.4s;
+    box-shadow:0 8px 20px rgba(255,179,71,.4);
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    background:#fff;
+}
+
+/* Features */
+.features{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.section-title{
+    font-size:2.5rem;
+    color:#5a3e2b;
+    margin-bottom:50px;
+}
+
+.feature-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.feature-box{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.feature-box:hover{
+    transform:translateY(-10px);
+}
+
+.feature-box h3{
+    color:#5a3e2b;
+    margin-bottom:15px;
+}
+
+/* Menu Section */
+.menu{
+    background:#fff;
+    padding:80px 8%;
+    text-align:center;
+}
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.menu-card{
+    border-radius:20px;
+    overflow:hidden;
+    background:white;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    transition:.4s;
+}
+
+.menu-card:hover{
+    transform:scale(1.05);
+}
+
+.menu-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.menu-card h3{
+    margin:15px 0;
+    color:#5a3e2b;
+}
+
+.menu-card p{
+    padding:0 20px 20px;
+    color:#666;
+}
+
+/* CTA */
+.cta{
+    padding:80px 8%;
+    text-align:center;
+    background:linear-gradient(135deg,#6f4e37,#3e2723);
+    color:white;
+}
+
+.cta h2{
+    font-size:2.5rem;
+    margin-bottom:20px;
+}
+
+/* Footer */
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+    }
+
+    nav ul{
+        margin-top:15px;
+    }
+
+    .hero-content h1{
+        font-size:2.5rem;
+    }
+
+    .hero-content p{
+        font-size:1rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">☕ Bean Bliss</div>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Fresh Coffee, Cozy Moments</h1>
+        <p>Experience handcrafted coffee and delicious snacks in a warm atmosphere.</p>
+        <a href="#" class="btn">Explore Menu</a>
+    </div>
+</section>
+
+<section class="features">
+    <h2 class="section-title">Why Choose Us?</h2>
+
+    <div class="feature-container">
+
+        <div class="feature-box">
+            <h3>☕ Premium Coffee</h3>
+            <p>Freshly roasted beans sourced from the finest farms.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>🍰 Delicious Desserts</h3>
+            <p>Homemade cakes and pastries baked daily.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>📶 Free Wi-Fi</h3>
+            <p>Work, study, or relax with fast internet access.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="menu">
+    <h2 class="section-title">Popular Menu</h2>
+
+    <div class="menu-grid">
+
+        <div class="menu-card">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800">
+            <h3>Cappuccino</h3>
+            <p>Rich espresso with creamy milk foam.</p>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=800">
+            <h3>Chocolate Cake</h3>
+            <p>Soft, moist, and irresistible chocolate delight.</p>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800">
+            <h3>Cold Coffee</h3>
+            <p>Refreshing blend of coffee, milk, and ice.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Visit Us Today!</h2>
+    <p>Enjoy the perfect cup of coffee and unforgettable moments.</p>
+    <br>
+    <a href="#" class="btn">Reserve a Table</a>
+</section>
+
+<footer>
+    <p>© 2026 Bean Bliss Café | Made with ❤️</p>
+</footer>
+
+</body>
+</html>
