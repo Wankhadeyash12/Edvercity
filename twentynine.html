@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Grid Photo Gallery</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    min-height:100vh;
+    padding:40px;
+}
+
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:40px;
+    font-size:3rem;
+    text-shadow:3px 3px 10px rgba(0,0,0,0.3);
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.gallery-item{
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    cursor:pointer;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:0.5s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.15);
+}
+
+/* Large Images */
+.gallery-item:nth-child(1){
+    grid-column:span 2;
+}
+
+.gallery-item:nth-child(4){
+    grid-row:span 2;
+}
+
+@media(max-width:768px){
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(4){
+        grid-column:span 1;
+        grid-row:span 1;
+    }
+
+    h1{
+        font-size:2rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<h1>CSS Grid Photo Gallery</h1>
+
+<div class="gallery">
+
+    <div class="gallery-item">
+        <img src="yash.jpeg" alt="me">
+    </div>
+
+    <div class="gallery-item">
+        <img src="Team.jpeg" alt="team">
+    </div>
+
+    <div class="gallery-item">
+        <img src="nature.png"nature">
+    </div>
+
+    <div class="gallery-item">
+        <img src="mountain.png" alt="Mountain">
+    </div>
+
+    <div class="gallery-item">
+        <img src="beatch.png" alt="Beach">
+    </div>
+
+    <div class="gallery-item">
+        <img src="forest.png" alt="Forest">
+    </div>
+
+</div>
+
+</body>
+</html>
