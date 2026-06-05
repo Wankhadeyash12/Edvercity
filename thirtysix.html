@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amazon Product Card</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#eaeded;
+    padding:20px;
+}
+
+/* Product Card */
+.product-card{
+    width:350px;
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    transition:0.3s;
+    position:relative;
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+}
+
+/* Discount Badge */
+.badge{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:#cc0c39;
+    color:white;
+    padding:8px 12px;
+    border-radius:5px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+/* Product Image */
+.product-card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+/* Content */
+.product-content{
+    padding:20px;
+}
+
+.product-title{
+    font-size:20px;
+    font-weight:600;
+    color:#111;
+    margin-bottom:10px;
+}
+
+.rating{
+    color:#ffa41c;
+    margin-bottom:10px;
+}
+
+.rating span{
+    color:#555;
+    margin-left:5px;
+}
+
+/* Price */
+.price{
+    margin:15px 0;
+}
+
+.current-price{
+    font-size:28px;
+    font-weight:bold;
+    color:#B12704;
+}
+
+.old-price{
+    text-decoration:line-through;
+    color:#777;
+    margin-left:10px;
+}
+
+.discount{
+    color:green;
+    font-weight:bold;
+    margin-left:10px;
+}
+
+/* Buttons */
+.buttons{
+    display:flex;
+    gap:10px;
+}
+
+.cart-btn,
+.buy-btn{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+}
+
+.cart-btn{
+    background:#ffd814;
+}
+
+.cart-btn:hover{
+    background:#f7ca00;
+}
+
+.buy-btn{
+    background:#ffa41c;
+}
+
+.buy-btn:hover{
+    background:#fa8900;
+}
+
+/* Delivery */
+.delivery{
+    margin-top:15px;
+    color:#007600;
+    font-size:14px;
+}
+
+@media(max-width:400px){
+    .product-card{
+        width:100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="product-card">
+
+    <div class="badge">
+        25% OFF
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800"
+         alt="Smartphone">
+
+    <div class="product-content">
+
+        <h2 class="product-title">
+            Samsung Galaxy S25 Ultra 5G
+        </h2>
+
+        <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>(4,589 Ratings)</span>
+        </div>
+
+        <div class="price">
+            <span class="current-price">₹89,999</span>
+            <span class="old-price">₹1,19,999</span>
+            <span class="discount">25% Off</span>
+        </div>
+
+        <p>
+            12GB RAM | 256GB Storage | 200MP Camera |
+            Snapdragon Processor
+        </p>
+
+        <div class="delivery">
+            ✔ FREE Delivery by Tomorrow
+        </div>
+
+        <br>
+
+        <div class="buttons">
+            <button class="cart-btn">
+                Add to Cart
+            </button>
+
+            <button class="buy-btn">
+                Buy Now
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
