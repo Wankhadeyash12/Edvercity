@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Showcase</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#667eea,#764ba2);
+    min-height:100vh;
+    padding:30px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:30px;
+    font-size:40px;
+}
+
+.media-card{
+    background:white;
+    padding:20px;
+    margin-bottom:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.media-card h2{
+    color:#4f46e5;
+    margin-bottom:15px;
+}
+
+video,
+audio,
+iframe{
+    width:100%;
+    border-radius:10px;
+}
+
+iframe{
+    height:400px;
+    border:none;
+}
+
+footer{
+    text-align:center;
+    color:white;
+    margin-top:20px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🎵 Multimedia Webpage 🎬</h1>
+
+    <!-- Video Section -->
+    <div class="media-card">
+        <h2>📹 Video Player</h2>
+
+        <video controls>
+            <source src="sample-video.mp4" type="video/mp4">
+            Your browser does not support video.
+        </video>
+    </div>
+
+    <!-- Audio Section -->
+    <div class="media-card">
+        <h2>🎧 Audio Player</h2>
+
+        <audio controls>
+            <source src="sample-audio.mp3" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
+    </div>
+
+    <!-- YouTube Section -->
+    <div class="media-card">
+        <h2>▶️ YouTube Video</h2>
+
+        <iframe
+            src="https://youtu.be/2GPdlk2wHL4?si=OZzXJH-08xgyUpzR"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <footer>
+        <p>© 2026 Multimedia Showcase</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
