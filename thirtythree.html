@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Login Page</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    overflow:hidden;
+}
+
+/* Floating Background Circles */
+.circle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,0.15);
+}
+
+.circle1{
+    width:250px;
+    height:250px;
+    top:-80px;
+    left:-80px;
+}
+
+.circle2{
+    width:180px;
+    height:180px;
+    bottom:-60px;
+    right:-60px;
+}
+
+/* Login Card */
+.login-container{
+    position:relative;
+    width:380px;
+    padding:40px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.3);
+    text-align:center;
+}
+
+.login-container h2{
+    color:white;
+    margin-bottom:30px;
+    font-size:32px;
+}
+
+/* Input Box */
+.input-box{
+    position:relative;
+    margin-bottom:20px;
+}
+
+.input-box input{
+    width:100%;
+    padding:15px 45px;
+    border:none;
+    outline:none;
+    border-radius:30px;
+    background:rgba(255,255,255,0.2);
+    color:white;
+    font-size:16px;
+}
+
+.input-box input::placeholder{
+    color:#eee;
+}
+
+.input-box i{
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:white;
+}
+
+/* Options */
+.options{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+    font-size:14px;
+}
+
+.options a,
+.options label{
+    color:white;
+    text-decoration:none;
+}
+
+/* Button */
+.btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#667eea;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(255,255,255,0.3);
+}
+
+/* Register Link */
+.register{
+    margin-top:20px;
+    color:white;
+}
+
+.register a{
+    color:#fff;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+/* Responsive */
+@media(max-width:450px){
+
+    .login-container{
+        width:90%;
+        padding:30px 20px;
+    }
+
+    .login-container h2{
+        font-size:28px;
+    }
+
+    .options{
+        flex-direction:column;
+        gap:10px;
+        align-items:center;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="circle circle1"></div>
+<div class="circle circle2"></div>
+
+<div class="login-container">
+
+    <h2>Login</h2>
+
+    <form>
+
+        <div class="input-box">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username" required>
+        </div>
+
+        <div class="input-box">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" required>
+        </div>
+
+        <div class="options">
+            <label>
+                <input type="checkbox">
+                Remember Me
+            </label>
+
+            <a href="#">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="btn">
+            Sign In
+        </button>
+
+    </form>
+
+    <div class="register">
+        Don't have an account?
+        <a href="#">Register</a>
+    </div>
+
+</div>
+
+</body>
+</html>
