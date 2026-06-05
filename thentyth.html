@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(135deg,#667eea,#764ba2);
+            padding:20px;
+        }
+
+        .container{
+            max-width:900px;
+            background:white;
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0 10px 30px rgba(0,0,0,0.3);
+            text-align:center;
+        }
+
+        .container img{
+            width:100%;
+            height:auto;
+            display:block;
+            transition:0.5s ease;
+        }
+
+        .container img:hover{
+            transform:scale(1.05);
+        }
+
+        .content{
+            padding:25px;
+        }
+
+        h1{
+            color:#333;
+            margin-bottom:15px;
+        }
+
+        p{
+            color:#666;
+            line-height:1.6;
+            margin-bottom:20px;
+        }
+
+        .btn{
+            display:inline-block;
+            padding:12px 25px;
+            background:#667eea;
+            color:white;
+            text-decoration:none;
+            border-radius:30px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#764ba2;
+        }
+
+        @media(max-width:768px){
+            h1{
+                font-size:28px;
+            }
+
+            p{
+                font-size:15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200"
+             alt="Responsive Image">
+
+        <div class="content">
+            <h1>Responsive Image Gallery</h1>
+
+            <p>
+                This image automatically adjusts to different screen sizes.
+                Resize your browser window to see the responsive effect.
+            </p>
+
+            <a href="#" class="btn">Explore More</a>
+        </div>
+    </div>
+
+</body>
+</html>
