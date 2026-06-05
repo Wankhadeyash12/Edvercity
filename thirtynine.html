@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduTech Dashboard</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    display:flex;
+}
+
+/* Sidebar */
+
+.sidebar{
+    width:260px;
+    height:100vh;
+    background:linear-gradient(
+    180deg,
+    #4f46e5,
+    #7c3aed);
+
+    color:white;
+    padding:25px;
+    position:fixed;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:40px;
+}
+
+.menu{
+    list-style:none;
+}
+
+.menu li{
+    margin:12px 0;
+}
+
+.menu li a{
+    color:white;
+    text-decoration:none;
+    display:block;
+    padding:14px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.menu li a:hover{
+    background:rgba(255,255,255,.2);
+}
+
+.menu i{
+    margin-right:10px;
+}
+
+/* Main Content */
+
+.main{
+    margin-left:260px;
+    width:100%;
+    padding:30px;
+}
+
+/* Top Bar */
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.search{
+    background:white;
+    padding:12px 20px;
+    border-radius:30px;
+    width:300px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.search input{
+    border:none;
+    outline:none;
+    width:100%;
+}
+
+.profile{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.profile img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+}
+
+/* Stats */
+
+.stats{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+}
+
+.stat-card{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+}
+
+.stat-card i{
+    font-size:35px;
+    color:#4f46e5;
+    margin-bottom:10px;
+}
+
+.stat-card h2{
+    color:#111827;
+}
+
+/* Courses */
+
+.section-title{
+    margin:35px 0 20px;
+}
+
+.courses{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:20px;
+}
+
+.course-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.course-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.course-content{
+    padding:20px;
+}
+
+.course-content h3{
+    margin-bottom:10px;
+}
+
+.progress{
+    background:#e5e7eb;
+    height:8px;
+    border-radius:20px;
+    margin-top:15px;
+}
+
+.progress span{
+    display:block;
+    height:100%;
+    background:#4f46e5;
+    border-radius:20px;
+}
+
+/* Upcoming Classes */
+
+.classes{
+    margin-top:30px;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.class-item{
+    display:flex;
+    justify-content:space-between;
+    padding:15px 0;
+    border-bottom:1px solid #eee;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.sidebar{
+    position:relative;
+    width:100%;
+    height:auto;
+}
+
+.main{
+    margin-left:0;
+}
+
+body{
+    flex-direction:column;
+}
+
+.topbar{
+    flex-direction:column;
+    gap:15px;
+}
+
+.search{
+    width:100%;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+    <div class="logo">
+        🎓 EduLearn
+    </div>
+
+    <ul class="menu">
+
+        <li><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+
+        <li><a href="#"><i class="fas fa-book"></i> My Courses</a></li>
+
+        <li><a href="#"><i class="fas fa-video"></i> Live Classes</a></li>
+
+        <li><a href="#"><i class="fas fa-chart-line"></i> Progress</a></li>
+
+        <li><a href="#"><i class="fas fa-certificate"></i> Certificates</a></li>
+
+        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+
+    </ul>
+
+</div>
+
+<!-- Main -->
+
+<div class="main">
+
+    <div class="topbar">
+
+        <div class="search">
+            <input type="text"
+            placeholder="Search Courses...">
+        </div>
+
+        <div class="profile">
+
+            <img src="https://i.pravatar.cc/100?img=12">
+
+            <h4>Yash</h4>
+
+        </div>
+
+    </div>
+
+    <!-- Stats -->
+
+    <div class="stats">
+
+        <div class="stat-card">
+            <i class="fas fa-book-open"></i>
+            <h2>12</h2>
+            <p>Courses Enrolled</p>
+        </div>
+
+        <div class="stat-card">
+            <i class="fas fa-clock"></i>
+            <h2>85 hrs</h2>
+            <p>Learning Time</p>
+        </div>
+
+        <div class="stat-card">
+            <i class="fas fa-award"></i>
+            <h2>8</h2>
+            <p>Certificates</p>
+        </div>
+
+        <div class="stat-card">
+            <i class="fas fa-chart-bar"></i>
+            <h2>92%</h2>
+            <p>Average Score</p>
+        </div>
+
+    </div>
+
+    <!-- Courses -->
+
+    <h2 class="section-title">
+        My Courses
+    </h2>
+
+    <div class="courses">
+
+        <div class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
+
+            <div class="course-content">
+
+                <h3>Full Stack Web Development</h3>
+
+                <p>Progress: 80%</p>
+
+                <div class="progress">
+                    <span style="width:80%"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97">
+
+            <div class="course-content">
+
+                <h3>Data Structures & Algorithms</h3>
+
+                <p>Progress: 65%</p>
+
+                <div class="progress">
+                    <span style="width:65%"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c">
+
+            <div class="course-content">
+
+                <h3>UI/UX Design Masterclass</h3>
+
+                <p>Progress: 45%</p>
+
+                <div class="progress">
+                    <span style="width:45%"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Upcoming Classes -->
+
+    <div class="classes">
+
+        <h2>Upcoming Classes</h2>
+
+        <div class="class-item">
+            <span>MERN Stack Live Session</span>
+            <span>10:00 AM</span>
+        </div>
+
+        <div class="class-item">
+            <span>React Workshop</span>
+            <span>2:00 PM</span>
+        </div>
+
+        <div class="class-item">
+            <span>DSA Mock Interview</span>
+            <span>6:00 PM</span>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
