@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox Card</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    font-family:Arial, sans-serif;
+}
+
+.card{
+    width:300px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.card img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+}
+
+.card h2{
+    color:#333;
+    margin:15px 0 10px;
+}
+
+.card p{
+    color:#666;
+    font-size:15px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:#4f46e5;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.btn:hover{
+    background:#3730a3;
+}
+
+</style>
+</head>
+<body>
+
+<div class="card">
+
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile">
+
+    <h2>Yash Wankhade</h2>
+
+    <p>
+        Full Stack Web & Android Developer
+    </p>
+
+    <a href="#" class="btn">View Profile</a>
+
+</div>
+
+</body>
+</html>
