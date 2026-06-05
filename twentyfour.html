@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative Gradient Background</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:linear-gradient(
+        -45deg,
+        #ff6b6b,
+        #6c63ff,
+        #00d4ff,
+        #ff9f43
+    );
+    background-size:400% 400%;
+    animation:gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Floating Circles */
+.circle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(5px);
+    animation:float 6s ease-in-out infinite;
+}
+
+.circle1{
+    width:200px;
+    height:200px;
+    top:10%;
+    left:10%;
+}
+
+.circle2{
+    width:150px;
+    height:150px;
+    bottom:15%;
+    right:10%;
+    animation-delay:2s;
+}
+
+.circle3{
+    width:100px;
+    height:100px;
+    top:20%;
+    right:20%;
+    animation-delay:4s;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-30px);
+    }
+}
+
+/* Main Card */
+.container{
+    width:90%;
+    max-width:750px;
+    text-align:center;
+    padding:50px;
+    border-radius:30px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.3);
+    box-shadow:0 15px 40px rgba(0,0,0,0.25);
+}
+
+h1{
+    color:white;
+    font-size:3.5rem;
+    margin-bottom:20px;
+    text-shadow:3px 3px 10px rgba(0,0,0,0.4);
+}
+
+p{
+    color:white;
+    font-size:1.2rem;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    border-radius:50px;
+    background:linear-gradient(45deg,#ff416c,#ff4b2b);
+    box-shadow:0 8px 20px rgba(255,75,43,0.4);
+    transition:0.4s;
+}
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 12px 30px rgba(255,75,43,0.6);
+}
+
+@media(max-width:768px){
+    h1{
+        font-size:2.3rem;
+    }
+
+    p{
+        font-size:1rem;
+    }
+
+    .container{
+        padding:30px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="circle circle1"></div>
+<div class="circle circle2"></div>
+<div class="circle circle3"></div>
+
+<div class="container">
+    <h1>Welcome to My Creative Page</h1>
+
+    <p>
+        Experience the beauty of animated gradients,
+        floating elements, glassmorphism effects,
+        and smooth hover animations in a modern web design.
+    </p>
+
+    <a href="#" class="btn">Explore Now</a>
+</div>
+
+</body>
+</html>
